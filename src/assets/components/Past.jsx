@@ -37,11 +37,11 @@ const Past = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className='flex flex-col gap-5 mt-5'>
+      <div className='flex flex-col gap-5 mt-5  h-50px'>
         {filteredData.length > 0 && filteredData.map((paste) => {
           return (
             
-            <div key={paste._id} className='border'>
+            <div key={paste._id} className=' border '>
               <div>
                 {paste.title}
               </div>

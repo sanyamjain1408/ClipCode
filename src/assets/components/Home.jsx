@@ -48,6 +48,7 @@ const Home = () => {
     }
   return (
    <div>
+    <div className='h-3'></div>
      <div className='flex flex-row gap-7 place-content-evenly'>
      <input className='bg-black pl-6 rounded-2xl mt-1 w-[80%]'
       type='text'

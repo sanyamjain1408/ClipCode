@@ -36,7 +36,7 @@ const Past = () => {
       <div id='sam' className='flex justify-center'>
       <input
       id='sanyam'
-        className='  p-3 rounded-2xl  w-[50vw] mt-5 bg-black text-left placeholder-gray-400 placeholder-blink '
+        className='  p-3 rounded-2xl w-[90%] md:w-[50vw] mt-5 bg-black text-left placeholder-gray-400 placeholder-blink '
         type='search'
         placeholder ='search here .....'
         value={searchTerm}
@@ -44,12 +44,12 @@ const Past = () => {
       />
       </div>
       
-      <div className='flex justify-center  '>
-      <div className='flex flex-col gap-5 mt-5  h-100px'>
+      <div className='flex justify-center  mt-5 '>
+      <div className='flex flex-col gap-5 w-full max-w-screen-lg'>
         {filteredData.length > 0 && filteredData.map((paste) => {
           return (
             
-            <div key={paste._id} className=' flex justify-between p-5 gap-1.5 border w-[80vw]   '>
+            <div key={paste._id} className=' flex justify-between p-5 gap-1.5 border  w-full rounded-xl '>
 
 
               <div >
@@ -62,7 +62,7 @@ const Past = () => {
               </div>
 
 
-             <div className='flex flex-col'>
+             <div className='flex flex-col justify-between'>
              <div className='flex flex-row gap-4 place-content-evenly'>
                 <button>
                   <a href={`/?pastId=${paste._id}`}>

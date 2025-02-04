@@ -50,7 +50,7 @@ const Home = () => {
    <div >
     <div className='h-3 '></div>
      <div className='flex flex-row gap-7 place-content-evenly'>
-     <input className='bg-black pl-6 rounded-2xl mt-1 w-[80%]'
+     <input className='bg-black pl-6 rounded-2xl mt-1 w-[80%] max-w-full'
       type='text'
       placeholder='enter title here'
       value={title}
@@ -64,9 +64,9 @@ const Home = () => {
         }
      </button>
     </div>
-    <div className='flex mt-8 items-center justify-center'>
+    <div className='flex mt-8 justify-center '>
         <textarea
-        className='bg-black rounded-2xl mt-4 min-w-[500px] p-4  '
+        className='bg-black rounded-2xl mt-4 w-full md:w-[80%] max-w-full p-4 resize-none '
         value={value}
         placeholder='enter content here '
         onChange={(e) => setValue(e.target.value)}

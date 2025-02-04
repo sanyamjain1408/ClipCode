@@ -36,7 +36,7 @@ const Past = () => {
       <div id='sam' className='flex justify-center'>
       <input
       id='sanyam'
-        className='  p-3 rounded-2xl  w-[50vw] mt-5 bg-black text-center placeholder-gray-400 placeholder-blink '
+        className='  p-3 rounded-2xl  w-[50vw] mt-5 bg-black text-left placeholder-gray-400 placeholder-blink '
         type='search'
         placeholder ='search here .....'
         value={searchTerm}

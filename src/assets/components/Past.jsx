@@ -49,7 +49,7 @@ const Past = () => {
         {filteredData.length > 0 && filteredData.map((paste) => {
           return (
             
-            <div key={paste._id} className=' flex justify-between pl-1 pt-3 pb-3 pr-1 gap-1.5 border  w-full rounded-xl '>
+            <div key={paste._id} className=' flex justify-between pl-4 pt-3 pb-3 pr-1 gap-1 border  w-full rounded-xl '>
 
 
               <div >
@@ -63,7 +63,7 @@ const Past = () => {
 
 
              <div className='flex flex-col justify-between'>
-             <div className='flex flex-row gap-4 place-content-evenly'>
+             <div className='flex flex-row gap-2 place-content-evenly'>
                 <button>
                   <a href={`/?pastId=${paste._id}`}>
                   Edit

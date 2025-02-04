@@ -47,8 +47,8 @@ const Home = () => {
      setSearchParams({});
     }
   return (
-   <div>
-    <div className='h-3'></div>
+   <div >
+    <div className='h-3 '></div>
      <div className='flex flex-row gap-7 place-content-evenly'>
      <input className='bg-black pl-6 rounded-2xl mt-1 w-[80%]'
       type='text'
@@ -64,7 +64,7 @@ const Home = () => {
         }
      </button>
     </div>
-    <div className='mt-8'>
+    <div className='flex mt-8 items-center justify-center'>
         <textarea
         className='bg-black rounded-2xl mt-4 min-w-[500px] p-4  '
         value={value}

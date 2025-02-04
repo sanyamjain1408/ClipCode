@@ -1,0 +1,14 @@
+/* Placeholder blink animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Corrected class for placeholder blink */
+.placeholder-blink::placeholder {
+  animation: blink 1.5s infinite;
+}
+
+#sanyam::placeholder {
+    animation: blink 1.5s infinite;
+  }

@@ -49,7 +49,7 @@ const Past = () => {
         {filteredData.length > 0 && filteredData.map((paste) => {
           return (
             
-            <div key={paste._id} className=' flex justify-between p-3 gap-1.5 border  w-full rounded-xl '>
+            <div key={paste._id} className=' flex justify-between pl-1 pt-3 pb-3 pr-1 gap-1.5 border  w-full rounded-xl '>
 
 
               <div >

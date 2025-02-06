@@ -53,10 +53,10 @@ const Past = () => {
 
   <div className='w-full sm:w-auto'>
     <div className='font-extrabold text-black text-xl sm:text-2xl md:text-3xl break-words max-w-full'>
-      {paste.title.split("").slice(0, 10).join("")}...
+      {paste.title.split("").slice(0, 20).join("")} --
     </div>
     <div className='font-medium text-black text-lg sm:text-xl md:text-2xl break-words max-w-full'>
-      {paste.content.split("").slice(0, 10).join("")}.....
+      {paste.content.split("").slice(0, 20).join("")}.....
     </div>
   </div>
 

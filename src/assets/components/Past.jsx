@@ -49,53 +49,36 @@ const Past = () => {
         {filteredData.length > 0 && filteredData.map((paste) => {
           return (
             
-            <div key={paste._id} className=' flex justify-between pl-4 pt-3 pb-3 pr-1 gap-1 border  w-full rounded-xl '>
+            <div key={paste._id} className='flex flex-wrap justify-between items-center p-3 gap-2 border w-full rounded-xl  max-w-full overflow-hidden'>
+
+  <div className='w-full sm:w-auto'>
+    <div className='font-extrabold text-black text-xl sm:text-2xl md:text-3xl break-words max-w-full'>
+      {paste.title.split("").slice(0, 10).join("")}...
+    </div>
+    <div className='font-medium text-black text-lg sm:text-xl md:text-2xl break-words max-w-full'>
+      {paste.content.split("").slice(0, 10).join("")}.....
+    </div>
+  </div>
+
+  <div className='flex flex-col justify-between w-full sm:w-auto'>
+    <div className='flex flex-wrap gap-2 justify-center sm:justify-start'>
+      <button><a href={`/?pastId=${paste._id}`}>Edit</a></button>
+      <button><a href={`/pastes/${paste._id}`}>View</a></button>
+      <button onClick={() => handleDelete(paste._id)}>Delete</button>
+      <button onClick={() => {navigator.clipboard.writeText(paste.content); toast.success("Copied to Clipboard");}}>Copy</button>
+      <button onClick={() => handleShare(paste._id)}>Share</button>
+    </div>
+
+    <div className='flex justify-center mt-2 text-sm sm:text-base'>
+      <div>{new Date(paste.createdAt).toLocaleString()}</div>
+    </div>
+  </div>
+
+</div>
 
 
-              <div >
-              <div className='font-extrabold text-black text-4xl' >
-                {paste.title.split("").slice(0,10).join("")}...
-              </div>
-              <div className='font-medium text-black text-2xl'>
-                {paste.content.split("").slice(0,10).join("")}.....
-              </div>
-              </div>
 
 
-             <div className='flex flex-col justify-between'>
-             <div className='flex flex-row gap-2 place-content-evenly'>
-                <button>
-                  <a href={`/?pastId=${paste._id}`}>
-                  Edit
-                  </a>
-                </button>
-                <button>
-                    <a href={`/pastes/${paste._id}`}>
-                    View
-                    </a> 
-                </button>
-                <button onClick={() => handleDelete(paste._id)}>
-                  Delete
-                </button>
-                <button onClick={() => {
-                  navigator.clipboard.writeText(paste.content);
-                  toast.success("Copied to Clipboard");
-                }}>
-                  Copy
-                </button>
-                <button onClick={() => handleShare(paste._id)}>
-                  Share
-                </button>
-              </div>
-
-             <div className='flex justify-center mt-2'>
-             <div>
-                {new Date(paste.createdAt).toLocaleString()}
-              </div>
-             </div>
-             </div>
-
-            </div>
           );
         })}
       </div>
